@@ -9,7 +9,7 @@ collections:
   - name: "blog"
     label: "Blog"
     folder: "src/blog"
-    create: "true"
+    create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - name: "title"
