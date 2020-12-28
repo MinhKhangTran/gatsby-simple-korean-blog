@@ -7,12 +7,13 @@ import {
   Icon,
   Text,
   VStack,
+  Image,
 } from "@chakra-ui/react";
 import React from "react";
 import flag from "../assets/001-south-korea.svg";
-import { AiFillHome } from "react-icons/ai";
-import { FaEnvelope } from "react-icons/fa";
-import { Link } from "gatsby";
+// import { AiFillHome } from "react-icons/ai";
+// import { FaEnvelope } from "react-icons/fa";
+// import { Link } from "gatsby";
 import Navbar from "./Navbar";
 import { useColorModeValue } from "@chakra-ui/react";
 
@@ -29,11 +30,21 @@ const Hero = () => {
       <Box pos="absolute" right="0" top="0%">
         <Navbar />
       </Box>
-      <VStack spacing={2}>
+      <VStack mb={4} spacing={2}>
         <Flex justify="center">
-          <img width="175" height="175" src={flag} alt="Flagge" />
+          <Image
+            w={{ base: "100px", md: "175px" }}
+            h={{ base: "100px", md: "175px" }}
+            src={flag}
+            alt="Flagge"
+          />
         </Flex>
-        <HStack spacing="20px" justify="center" align="center">
+        {/* <HStack
+          display={{ base: "none", md: "block" }}
+          spacing="20px"
+          justify="center"
+          align="center"
+        >
           <Link to="/">
             <Icon
               boxSize={{ base: "1.5em", md: "2em" }}
@@ -46,7 +57,7 @@ const Hero = () => {
             color={color600}
             as={FaEnvelope}
           />
-        </HStack>
+        </HStack> */}
         <Heading color={color700} textAlign="center" as="h4">
           Mein Koreanisch-Blog
         </Heading>

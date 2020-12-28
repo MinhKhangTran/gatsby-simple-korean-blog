@@ -12,8 +12,8 @@ const Layout = ({ location, children }) => {
   const color700 = useColorModeValue("startup.700", "startup.600");
   if (isRootPath) {
     return (
-      <Box>
-        <Center background={bg100} height="50%" w="100%">
+      <Box maxHeight="50vh">
+        <Center background={bg100} height="100%" w="100%">
           <Hero />
         </Center>
         {children}
