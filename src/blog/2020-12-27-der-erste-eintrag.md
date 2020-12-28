@@ -1,23 +1,11 @@
 ---
-title: Der erste Eintrag
-date: 2020-12-27T12:26:31.981Z
+title: "자기소개 "
+date: 2020-12-28T12:39:07.280Z
 ---
-Hallo das ist ein Test
+안녕하세요?
 
-**Bold**
+저는 독일에 사는 캉이라고 합니다. 저는 한국 여자친구하고 울름에 살아요. 제 여자친구 덕분에 이 블로그를 만들 수 있었어요. 저는 블로그로 한국어를 공부하고 싶어요. 
 
-*Italic*
+제 블로그에 대해 더 쓰기 전에 자기소개를 하고 싶어요
 
-`console.log("Hello World")`
-
-# Heading 1
-
-> Ein Quote
-
-* Unordert List Item1
-* Unordert List Item 2
-
-1. Nummerierung
-2. Nummerierung
-
-![Seoul von oben](/img/markus-winkler-jrykesi61ce-unsplash.jpg "Seoul von oben")
+![]()
