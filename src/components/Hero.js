@@ -6,6 +6,7 @@ import {
   HStack,
   Icon,
   Text,
+  VStack,
 } from "@chakra-ui/react";
 import React from "react";
 import flag from "../assets/001-south-korea.svg";
@@ -28,35 +29,25 @@ const Hero = () => {
       <Box pos="absolute" right="0" top="0%">
         <Navbar />
       </Box>
-      <Box>
+      <VStack spacing={2}>
         <Flex justify="center">
           <img width="175" height="175" src={flag} alt="Flagge" />
         </Flex>
-        <HStack
-          mt={{ base: "0", md: "-2" }}
-          spacing="20px"
-          justify="center"
-          align="center"
-        >
+        <HStack spacing="20px" justify="center" align="center">
           <Link to="/">
             <Icon
-              boxSize={{ base: "1.25em", md: "2em" }}
+              boxSize={{ base: "1.5em", md: "2em" }}
               color={color600}
               as={AiFillHome}
             />
           </Link>
           <Icon
-            boxSize={{ base: "1.25em", md: "2em" }}
+            boxSize={{ base: "1.5em", md: "2em" }}
             color={color600}
             as={FaEnvelope}
           />
         </HStack>
-        <Heading
-          mt={{ base: "2", md: "4" }}
-          color={color700}
-          textAlign="center"
-          as="h4"
-        >
+        <Heading color={color700} textAlign="center" as="h4">
           Mein Koreanisch-Blog
         </Heading>
         <Text
@@ -66,7 +57,7 @@ const Hero = () => {
         >
           Verfolge meine Fortschritte
         </Text>
-      </Box>
+      </VStack>
     </Center>
   );
 };

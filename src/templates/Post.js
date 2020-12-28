@@ -22,14 +22,14 @@ const Post = ({ data, pageContext, location }) => {
         </Text>
         <Flex mt={4} color="startup.500">
           <Text>
-            {prev && (
-              <Link to={prev.fields.slug}>← {prev.frontmatter.title}</Link>
+            {next && (
+              <Link to={next.fields.slug}>← {next.frontmatter.title} </Link>
             )}
           </Text>
           <Spacer></Spacer>
           <Text>
-            {next && (
-              <Link to={next.fields.slug}>{next.frontmatter.title} →</Link>
+            {prev && (
+              <Link to={prev.fields.slug}>{prev.frontmatter.title} →</Link>
             )}
           </Text>
         </Flex>
