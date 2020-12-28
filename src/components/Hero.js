@@ -21,7 +21,7 @@ const Hero = () => {
   return (
     <Center
       w={{ base: "90%", md: "50%" }}
-      height={{ base: "50%", md: "100%" }}
+      height="100%"
       mx="auto"
       pos="relative"
     >
@@ -32,16 +32,38 @@ const Hero = () => {
         <Flex justify="center">
           <img width="175" height="175" src={flag} alt="Flagge" />
         </Flex>
-        <HStack mt={-2} spacing="20px" justify="center" align="center">
+        <HStack
+          mt={{ base: "0", md: "-2" }}
+          spacing="20px"
+          justify="center"
+          align="center"
+        >
           <Link to="/">
-            <Icon boxSize="2em" color={color600} as={AiFillHome} />
+            <Icon
+              boxSize={{ base: "1.25em", md: "2em" }}
+              color={color600}
+              as={AiFillHome}
+            />
           </Link>
-          <Icon boxSize="2em" color={color600} as={FaEnvelope} />
+          <Icon
+            boxSize={{ base: "1.25em", md: "2em" }}
+            color={color600}
+            as={FaEnvelope}
+          />
         </HStack>
-        <Heading mt={4} color={color700} textAlign="center" as="h3">
+        <Heading
+          mt={{ base: "2", md: "4" }}
+          color={color700}
+          textAlign="center"
+          as={{ base: "h5", md: "h3" }}
+        >
           Mein Koreanisch-Blog
         </Heading>
-        <Text color={color600} textAlign="center" fontSize="xl">
+        <Text
+          color={color600}
+          textAlign="center"
+          fontSize={{ base: "lg", md: "xl" }}
+        >
           Verfolge meine Fortschritte
         </Text>
       </Box>

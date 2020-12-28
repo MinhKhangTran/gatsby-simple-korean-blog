@@ -13,7 +13,7 @@ const Layout = ({ location, children }) => {
   if (isRootPath) {
     return (
       <Box>
-        <Center background={bg100} height="50vh" w="100%">
+        <Center background={bg100} height={{base:"100%",md:"50%"}} w="100%">
           <Hero />
         </Center>
         {children}
