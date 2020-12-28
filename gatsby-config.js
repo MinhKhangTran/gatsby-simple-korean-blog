@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "simple-gatsby-blog",
+    title: "Koreanisch-Blog",
+    description: "Mein simpler koreanisch-blog zum lernen und lehren",
   },
   plugins: [
     "gatsby-plugin-netlify-cms",

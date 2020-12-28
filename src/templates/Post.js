@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import { Box, Flex, Heading, Spacer, Text } from "@chakra-ui/react";
+import SEO from "../components/SEO";
 
 const Post = ({ data, pageContext, location }) => {
   console.log(pageContext);
@@ -10,6 +11,7 @@ const Post = ({ data, pageContext, location }) => {
   const next = data.next;
   return (
     <Layout location={location}>
+      <SEO title={data.markdownRemark.frontmatter.title}></SEO>
       <Box w={{ base: "90%", md: "50%" }} mt={6} mx="auto">
         <Text color="startup.500">{data.markdownRemark.frontmatter.date}</Text>
         <Heading fontSize="3xl" color="startup.600">

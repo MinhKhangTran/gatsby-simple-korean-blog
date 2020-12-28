@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import { Box, Heading, Text } from "@chakra-ui/react";
 import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 
 const index = ({ data, pageContext, location }) => {
   const posts = data.allMarkdownRemark.edges;
@@ -10,6 +11,7 @@ const index = ({ data, pageContext, location }) => {
   console.log(location);
   return (
     <Layout location={location}>
+      <SEO title="Home"></SEO>
       <Box w={{ base: "90%", md: "50%" }} mt={4} mx="auto">
         {posts.map((post) => {
           return (

@@ -55,7 +55,7 @@ const Hero = () => {
           mt={{ base: "2", md: "4" }}
           color={color700}
           textAlign="center"
-          as={{ base: "h5", md: "h3" }}
+          as="h4"
         >
           Mein Koreanisch-Blog
         </Heading>
