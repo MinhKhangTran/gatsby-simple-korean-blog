@@ -21,7 +21,7 @@ const Hero = () => {
   return (
     <Center
       w={{ base: "90%", md: "50%" }}
-      height="100%"
+      height={{ base: "50%", md: "100%" }}
       mx="auto"
       pos="relative"
     >
