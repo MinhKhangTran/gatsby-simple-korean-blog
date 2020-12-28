@@ -1,34 +1,44 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/react";
+import Layout from "../components/Layout";
 
-const index = ({ data, pageContext }) => {
+const index = ({ data, pageContext, location }) => {
   const posts = data.allMarkdownRemark.edges;
   console.log(pageContext.limit);
   console.log(data);
+  console.log(location);
   return (
-    <Box w={{ base: "90%", md: "50%" }} mx="auto">
-      {/* {posts.map((post) => {
-        return <h1>{post.frontmatter.title}</h1>;
-      })} */}
-    </Box>
+    <Layout location={location}>
+      <Box w={{ base: "90%", md: "50%" }} mt={4} mx="auto">
+        {posts.map((post) => {
+          return (
+            <Box my={6}>
+              <Text color="startup.500">{post.node.frontmatter.date}</Text>
+              <Heading fontSize="3xl" color="startup.600">
+                {post.node.frontmatter.title}
+              </Heading>
+              <Link to={post.node.fields.slug}>
+                <Text>{post.node.excerpt}</Text>
+              </Link>
+            </Box>
+          );
+        })}
+      </Box>
+    </Layout>
   );
 };
 
 export const query = graphql`
-  query($skip: Int = 0, $limit: Int = 5) {
-    allMarkdownRemark(
-      limit: $limit
-      skip: $skip
-      sort: { fields: frontmatter___date, order: DESC }
-    ) {
+  query {
+    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
       totalCount
       edges {
         node {
           id
           excerpt
           frontmatter {
-            date(formatString: "MMM, DO YYYY")
+            date(formatString: "MMM, D YYYY")
             title
           }
           html

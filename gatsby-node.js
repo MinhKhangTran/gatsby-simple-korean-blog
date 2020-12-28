@@ -46,50 +46,53 @@ const turnPostIntoPages = async ({ actions, graphql }) => {
   const { data } = await graphql(`
     query {
       allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
-            }
+        nodes {
+          id
+          fields {
+            slug
           }
         }
       }
     }
   `);
   // 3. Loop
-  data.allMarkdownRemark.edges.forEach((edge) => {
+  const posts = data.allMarkdownRemark.nodes;
+  posts.forEach((post, index) => {
+    // vorherige und nachfolgende Post
+    const prevPostId = index === 0 ? null : posts[index - 1].id;
+    const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id;
     actions.createPage({
-      path: edge.node.fields.slug,
+      path: post.fields.slug,
       component: pageTemplate,
       context: {
-        slug: edge.node.fields.slug,
+        slug: post.fields.slug,
+        id: post.id,
+        prevPostId,
+        nextPostId,
       },
     });
   });
 
-  //  ======================================== Create Pagination==========================
-  // 1. pageSize and PageCount bestimmen
-  const pageSize = 5;
-  const pageCount = Math.ceil(data.allMarkdownRemark.edges.length / pageSize);
-  // 2. Template
-  const paginateTemplate = path.resolve("./src/pages/index.js");
-  // 3. Loop over pages and Create
-  for (let i = 0; i < pageCount; i++) {
-    let path = "/";
-    if (i > 0) {
-      path += `/${i + 1}`;
-    }
-    actions.createPage({
-      path,
-      component: paginateTemplate,
-      context: {
-        limit: pageSize,
-        skip: i * pageSize,
-        pageCount,
-        currentPage: i + 1,
-      },
-    });
-  }
+  // //  ======================================== Create Pagination==========================
+  // // 1. pageSize and PageCount bestimmen
+  // const pageSize = 5;
+  // const pageCount = Math.ceil(posts.length / pageSize);
+  // // 2. Template
+  // const paginateTemplate = path.resolve("./src/pages/index.js");
+  // // 3. Loop over pages and Create
+  // for (let i = 0; i < pageCount; i++) {
+  //   let path = `/${i + 1}`;
+  //   actions.createPage({
+  //     path,
+  //     component: paginateTemplate,
+  //     context: {
+  //       limit: pageSize,
+  //       skip: i * pageSize,
+  //       pageCount,
+  //       currentPage: i + 1,
+  //     },
+  //   });
+  // }
 };
 
 export async function createPages(params) {

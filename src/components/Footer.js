@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <Box color="startup.300" textAlign="center">
+    <Box color="startup.300" textAlign="center" mt={8} mb={4}>
       {new Date().getFullYear()} Made with{" "}
       <span role="img" aria-label="Herz">
         💚
