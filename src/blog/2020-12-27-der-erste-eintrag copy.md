@@ -1,6 +1,6 @@
 ---
 title: Ein langer Weg wartet auf mich (부족하고 아직 멀었어요)
-date: 2020-12-28T12:40:08.996Z
+date: 2021-01-06T14:57:04.667Z
 ---
 ![Seoul](/img/markus-winkler-jrykesi61ce-unsplash.jpg "Seoul ")
 
