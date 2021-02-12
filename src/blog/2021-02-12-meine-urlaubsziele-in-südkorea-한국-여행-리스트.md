@@ -2,8 +2,6 @@
 title: Meine Urlaubsziele in Südkorea (한국 여행 리스트)
 date: 2021-02-12T10:28:09.559Z
 ---
-
-
 <!--StartFragment-->
 
 ![Seoul Hauptbahnhof](/img/blogpost_urlaub.jpg "Seoul Hauptbahnhof")
@@ -36,5 +34,9 @@ date: 2021-02-12T10:28:09.559Z
 자 여러분, 이 곳들을 한국에 가면 가 보고 싶어요. 제 리스트는 아직 적어요. 하지만 드라마나 책을 볼수록 여행하고 싶은 곳이 더 많이 생길 거예요.\
 그리고 요즘 상황 때문에 비자 없이 한국에 못 가서 집에서 하루종일 드라마를 보고 한국어를 공부해요. 그 외에는 다른 방법이 없어요...\
 한국에 또 가도 되면 제 리스트가 더 늘어날 거예요 🤗.
+
+Original Post : 
+
+<https://m.blog.naver.com/minhkhangtran/222237389396>
 
 <!--EndFragment-->
